@@ -1,0 +1,35 @@
+{
+  "_comment": "All model, embedding, vector-store and retrieval settings of the HLD Assistant. Environment variables HLD_<SECTION>_<KEY> override these values (e.g. HLD_LLM_PROVIDER=ollama).",
+  "embedding": {
+    "provider": "hashing",
+    "dim": 2048,
+    "bge_model": "BAAI/bge-small-en-v1.5"
+  },
+  "vector_store": {
+    "backend": "numpy"
+  },
+  "chunking": {
+    "max_chars": 900,
+    "overlap_lines": 1
+  },
+  "retrieval": {
+    "top_k": 5,
+    "weight_bm25": 0.55,
+    "weight_dense": 0.45,
+    "min_confidence": 0.30,
+    "high_confidence": 0.60
+  },
+  "llm": {
+    "provider": "extractive",
+    "ollama_model": "llama3.2:3b",
+    "ollama_url": "http://127.0.0.1:11434",
+    "temperature": 0.0,
+    "timeout_s": 60
+  },
+  "server": {
+    "host": "127.0.0.1",
+    "port": 8000,
+    "max_upload_mb": 25,
+    "session_ttl_minutes": 480
+  }
+}

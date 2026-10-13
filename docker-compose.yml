@@ -1,0 +1,15 @@
+# Build context is the project root so the Dockerfile can copy Input_Data and the config.
+#   docker compose up --build        then open http://localhost:8000
+services:
+  hld-assistant:
+    build:
+      context: .
+      dockerfile: Code/Dockerfile
+    ports: ["8000:8000"]
+    volumes: ["hld-data:/data"]
+    environment:
+      HLD_SERVER_HOST: 0.0.0.0
+      # HLD_LLM_PROVIDER: ollama                       # use a local Ollama model (see README)
+      # HLD_LLM_OLLAMA_URL: http://host.docker.internal:11434
+volumes:
+  hld-data: {}

@@ -1,0 +1,672 @@
+[
+  {
+    "id": "Q01",
+    "project": "PRJ-BODY",
+    "question": "What does SWC_CentralLockArb do?",
+    "type": "descriptive",
+    "gold_sections": [
+      [
+        "HLD-BCM-001",
+        "4.2"
+      ]
+    ],
+    "expected_facts": [
+      "arbitrat",
+      "priority"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "Q02",
+    "project": "PRJ-BODY",
+    "question": "Which components produce SIG_VehicleSpeed?",
+    "type": "structured",
+    "gold_sections": [
+      [
+        "HLD-BCM-001",
+        "4.4"
+      ]
+    ],
+    "expected_facts": [
+      "SWC_SpeedSignalAdapter"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "Q03",
+    "project": "PRJ-BODY",
+    "question": "Which components consume SIG_KeyFobCmd?",
+    "type": "structured",
+    "gold_sections": [
+      [
+        "HLD-BCM-001",
+        "4.2"
+      ]
+    ],
+    "expected_facts": [
+      "SWC_CentralLockArb"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "Q04",
+    "project": "PRJ-BODY",
+    "question": "What are the required ports of SWC_DoorLockCtrl?",
+    "type": "structured",
+    "gold_sections": [
+      [
+        "HLD-BCM-001",
+        "4.3"
+      ]
+    ],
+    "expected_facts": [
+      "R_LockCmd",
+      "R_DoorAjar",
+      "R_ChildLock"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "Q05",
+    "project": "PRJ-BODY",
+    "question": "What is the safety level of SWC_DoorLockCtrl?",
+    "type": "structured",
+    "gold_sections": [
+      [
+        "HLD-BCM-001",
+        "4.3"
+      ]
+    ],
+    "expected_facts": [
+      "ASIL B"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "Q06",
+    "project": "PRJ-BODY",
+    "question": "What are the data type and unit of SIG_VehicleSpeed?",
+    "type": "structured",
+    "gold_sections": [
+      [
+        "HLD-BCM-001",
+        "6"
+      ]
+    ],
+    "expected_facts": [
+      "uint16",
+      "km/h"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "Q07",
+    "project": "PRJ-BODY",
+    "question": "Which test cases verify SWC_KeylessEntryMgr?",
+    "type": "structured",
+    "gold_sections": [
+      [
+        "HLD-BCM-001",
+        "4.1"
+      ]
+    ],
+    "expected_facts": [
+      "TC_BCM_001",
+      "TC_BCM_002"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "Q08",
+    "project": "PRJ-BODY",
+    "question": "Describe the remote unlock flow.",
+    "type": "flow",
+    "gold_sections": [
+      [
+        "HLD-BCM-001",
+        "7.1"
+      ]
+    ],
+    "expected_facts": [
+      "SIG_KeyFobCmd",
+      "SWC_CentralLockArb"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "Q09",
+    "project": "PRJ-BODY",
+    "question": "What happens in the crash unlock flow?",
+    "type": "flow",
+    "gold_sections": [
+      [
+        "HLD-BCM-001",
+        "7.3"
+      ]
+    ],
+    "expected_facts": [
+      "override",
+      "unlock"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "Q10",
+    "project": "PRJ-BODY",
+    "question": "If SWC_SpeedSignalAdapter changes, which components are impacted?",
+    "type": "impact",
+    "gold_sections": [
+      [
+        "HLD-BCM-001",
+        "4.4"
+      ]
+    ],
+    "expected_facts": [
+      "SWC_CentralLockArb",
+      "SWC_DoorLockCtrl",
+      "SWC_BcmGateway"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "Q11",
+    "project": "PRJ-BODY",
+    "question": "What does SWC_DiagSessionMgr depend on?",
+    "type": "structured",
+    "gold_sections": [
+      [
+        "HLD-DCM-003",
+        "4.1"
+      ]
+    ],
+    "expected_facts": [
+      "SIG_VehicleSpeed"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "Q12",
+    "project": "PRJ-BODY",
+    "question": "Which component stores diagnostic trouble codes?",
+    "type": "descriptive",
+    "gold_sections": [
+      [
+        "HLD-DCM-003",
+        "4.2"
+      ]
+    ],
+    "expected_facts": [
+      "SWC_DtcStorageMgr"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "Q13",
+    "project": "PRJ-BODY",
+    "question": "What is the timeout of the lock state port of SWC_BcmGateway?",
+    "type": "structured",
+    "gold_sections": [
+      [
+        "HLD-BCM-001",
+        "4.5"
+      ]
+    ],
+    "expected_facts": [
+      "150 ms"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "Q14",
+    "project": "PRJ-BODY",
+    "question": "What is the error handling of SWC_ChildLockMgr?",
+    "type": "descriptive",
+    "gold_sections": [
+      [
+        "HLD-BCM-001",
+        "4.6"
+      ]
+    ],
+    "expected_facts": [
+      "ACTIVE"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "Q15",
+    "project": "PRJ-BODY",
+    "question": "Where is SWC_BcmGateway defined?",
+    "type": "structured",
+    "gold_sections": [
+      [
+        "HLD-BCM-001",
+        "4.5"
+      ],
+      [
+        "HLD-DCM-003",
+        "4.4"
+      ]
+    ],
+    "expected_facts": [
+      "HLD-BCM-001",
+      "HLD-DCM-003"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "Q16",
+    "project": "PRJ-BODY",
+    "question": "How does the system handle a loss of the vehicle speed signal in automatic locking?",
+    "type": "descriptive",
+    "gold_sections": [
+      [
+        "HLD-BCM-001",
+        "4.2"
+      ]
+    ],
+    "expected_facts": [
+      "disabled"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "Q17",
+    "project": "PRJ-BODY",
+    "question": "Which interface carries the door ajar switch state?",
+    "type": "structured",
+    "gold_sections": [
+      [
+        "HLD-BCM-001",
+        "5.5"
+      ]
+    ],
+    "expected_facts": [
+      "SR_DoorAjarState"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "Q18",
+    "project": "PRJ-BODY",
+    "question": "Which diagnostic session change is rejected when the vehicle speed is invalid?",
+    "type": "descriptive",
+    "gold_sections": [
+      [
+        "HLD-DCM-003",
+        "4.1"
+      ]
+    ],
+    "expected_facts": [
+      "programming"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "Q19",
+    "project": "PRJ-ENERGY",
+    "question": "Which component estimates the state of charge?",
+    "type": "descriptive",
+    "gold_sections": [
+      [
+        "HLD-BMS-002",
+        "4.3"
+      ]
+    ],
+    "expected_facts": [
+      "SWC_SocEstimator"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "Q20",
+    "project": "PRJ-ENERGY",
+    "question": "What is the safety level of SWC_ChargeCtrl?",
+    "type": "structured",
+    "gold_sections": [
+      [
+        "HLD-BMS-002",
+        "4.5"
+      ]
+    ],
+    "expected_facts": [
+      "ASIL C"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "Q21",
+    "project": "PRJ-ENERGY",
+    "question": "Which components consume SIG_CellVoltage?",
+    "type": "structured",
+    "gold_sections": [
+      [
+        "HLD-BMS-002",
+        "4.3"
+      ]
+    ],
+    "expected_facts": [
+      "SWC_SocEstimator"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "Q22",
+    "project": "PRJ-ENERGY",
+    "question": "What is the unit and range of SIG_CellVoltage?",
+    "type": "structured",
+    "gold_sections": [
+      [
+        "HLD-BMS-002",
+        "6"
+      ]
+    ],
+    "expected_facts": [
+      "mV",
+      "2500..4300"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "Q23",
+    "project": "PRJ-ENERGY",
+    "question": "If SWC_CellMonitor changes, which components are impacted?",
+    "type": "impact",
+    "gold_sections": [
+      [
+        "HLD-BMS-002",
+        "4.1"
+      ]
+    ],
+    "expected_facts": [
+      "SWC_SocEstimator",
+      "SWC_ThermalMgr",
+      "SWC_ChargeCtrl"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "Q24",
+    "project": "PRJ-ENERGY",
+    "question": "Describe the charge limit calculation flow.",
+    "type": "flow",
+    "gold_sections": [
+      [
+        "HLD-BMS-002",
+        "7.1"
+      ]
+    ],
+    "expected_facts": [
+      "SWC_SocEstimator",
+      "SWC_ChargeCtrl"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "Q25",
+    "project": "PRJ-ENERGY",
+    "question": "What happens to cooling when the cell temperature is lost?",
+    "type": "descriptive",
+    "gold_sections": [
+      [
+        "HLD-BMS-002",
+        "4.4"
+      ]
+    ],
+    "expected_facts": [
+      "maximum"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "Q26",
+    "project": "PRJ-ENERGY",
+    "question": "Which test cases verify SWC_ThermalMgr?",
+    "type": "structured",
+    "gold_sections": [
+      [
+        "HLD-BMS-002",
+        "4.4"
+      ]
+    ],
+    "expected_facts": [
+      "TC_BMS_020",
+      "TC_BMS_021"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "Q27",
+    "project": "PRJ-ENERGY",
+    "question": "What are the provided ports of SWC_CellMonitor?",
+    "type": "structured",
+    "gold_sections": [
+      [
+        "HLD-BMS-002",
+        "4.1"
+      ]
+    ],
+    "expected_facts": [
+      "P_CellVoltage",
+      "P_CellTemp"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "P01",
+    "project": "PRJ-BODY",
+    "question": "Which software unit combines key fob, speed and crash inputs into a single lock command?",
+    "type": "paraphrase",
+    "gold_sections": [
+      [
+        "HLD-BCM-001",
+        "4.2"
+      ]
+    ],
+    "expected_facts": [
+      "SWC_CentralLockArb"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "P02",
+    "project": "PRJ-BODY",
+    "question": "What stops the door actuator output when the lock motor is jammed?",
+    "type": "paraphrase",
+    "gold_sections": [
+      [
+        "HLD-BCM-001",
+        "4.3"
+      ]
+    ],
+    "expected_facts": [
+      "disabled"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "P03",
+    "project": "PRJ-BODY",
+    "question": "Which function remembers the child safety setting after the ignition is switched off?",
+    "type": "paraphrase",
+    "gold_sections": [
+      [
+        "HLD-BCM-001",
+        "4.6"
+      ]
+    ],
+    "expected_facts": [
+      "non-volatile"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "P04",
+    "project": "PRJ-BODY",
+    "question": "How are wheel speed messages from the chassis network turned into the speed signal?",
+    "type": "paraphrase",
+    "gold_sections": [
+      [
+        "HLD-BCM-001",
+        "4.4"
+      ]
+    ],
+    "expected_facts": [
+      "SWC_SpeedSignalAdapter"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "P05",
+    "project": "PRJ-BODY",
+    "question": "What is the worst-case processor load of the door and access functions?",
+    "type": "paraphrase",
+    "gold_sections": [
+      [
+        "HLD-BCM-001",
+        "8"
+      ]
+    ],
+    "expected_facts": [
+      "12 percent"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "P06",
+    "project": "PRJ-BODY",
+    "question": "In which situation is a programming session refused by diagnostics?",
+    "type": "paraphrase",
+    "gold_sections": [
+      [
+        "HLD-DCM-003",
+        "4.1"
+      ]
+    ],
+    "expected_facts": [
+      "programming"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "P07",
+    "project": "PRJ-ENERGY",
+    "question": "What protects the cells against lithium plating at low temperature?",
+    "type": "paraphrase",
+    "gold_sections": [
+      [
+        "HLD-BMS-002",
+        "4.5"
+      ]
+    ],
+    "expected_facts": [
+      "charge limit"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "P08",
+    "project": "PRJ-ENERGY",
+    "question": "What does the battery software do when the state of charge input is not valid?",
+    "type": "paraphrase",
+    "gold_sections": [
+      [
+        "HLD-BMS-002",
+        "4.5"
+      ],
+      [
+        "HLD-BMS-002",
+        "4.3"
+      ]
+    ],
+    "expected_facts": [
+      "invalid"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "P09",
+    "project": "PRJ-ENERGY",
+    "question": "Which unit measures the current flowing through the battery pack?",
+    "type": "paraphrase",
+    "gold_sections": [
+      [
+        "HLD-BMS-002",
+        "4.2"
+      ]
+    ],
+    "expected_facts": [
+      "SWC_CurrentSensorAdapter"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "P10",
+    "project": "PRJ-ENERGY",
+    "question": "Which task period monitors the cell voltage and has the highest priority?",
+    "type": "paraphrase",
+    "gold_sections": [
+      [
+        "HLD-BMS-002",
+        "8"
+      ]
+    ],
+    "expected_facts": [
+      "10 ms"
+    ],
+    "expect_refusal": false
+  },
+  {
+    "id": "N01",
+    "project": "PRJ-BODY",
+    "question": "What is the capital of France?",
+    "type": "out_of_scope",
+    "gold_sections": [],
+    "expected_facts": [],
+    "expect_refusal": true
+  },
+  {
+    "id": "N02",
+    "project": "PRJ-BODY",
+    "question": "What is the safety level of SWC_AirbagCtrl?",
+    "type": "unknown_entity",
+    "gold_sections": [],
+    "expected_facts": [],
+    "expect_refusal": true
+  },
+  {
+    "id": "N03",
+    "project": "PRJ-BODY",
+    "question": "Who won the cricket world cup?",
+    "type": "out_of_scope",
+    "gold_sections": [],
+    "expected_facts": [],
+    "expect_refusal": true
+  },
+  {
+    "id": "N04",
+    "project": "PRJ-ENERGY",
+    "question": "Which components consume SIG_TirePressure?",
+    "type": "unknown_entity",
+    "gold_sections": [],
+    "expected_facts": [],
+    "expect_refusal": true
+  },
+  {
+    "id": "N05",
+    "project": "PRJ-BODY",
+    "question": "Write a poem about the ocean.",
+    "type": "out_of_scope",
+    "gold_sections": [],
+    "expected_facts": [],
+    "expect_refusal": true
+  },
+  {
+    "id": "N06",
+    "project": "PRJ-ENERGY",
+    "question": "What is the price of a Tesla Model 3 in India?",
+    "type": "out_of_scope",
+    "gold_sections": [],
+    "expected_facts": [],
+    "expect_refusal": true
+  }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "project": "PRJ-BODY",
+    "doc_id": "HLD-BCM-001",
+    "version": "1.0",
+    "title": "Body Control Module - Door and Access Control High-Level Design",
+    "family": "HLD-BCM-001",
+    "status": "superseded",
+    "file": "knowledge_base/PRJ-BODY/HLD-BCM-001_v1.0.pdf"
+  },
+  {
+    "project": "PRJ-BODY",
+    "doc_id": "HLD-BCM-001",
+    "version": "1.1",
+    "title": "Body Control Module - Door and Access Control High-Level Design",
+    "family": "HLD-BCM-001",
+    "status": "approved",
+    "file": "knowledge_base/PRJ-BODY/HLD-BCM-001_v1.1.pdf"
+  },
+  {
+    "project": "PRJ-BODY",
+    "doc_id": "HLD-DCM-003",
+    "version": "1.0",
+    "title": "Diagnostic Communication and Gateway High-Level Design",
+    "family": "HLD-DCM-003",
+    "status": "approved",
+    "file": "knowledge_base/PRJ-BODY/HLD-DCM-003_v1.0.pdf"
+  },
+  {
+    "project": "PRJ-ENERGY",
+    "doc_id": "HLD-BMS-002",
+    "version": "1.0",
+    "title": "Battery Management System High-Level Design",
+    "family": "HLD-BMS-002",
+    "status": "approved",
+    "file": "knowledge_base/PRJ-ENERGY/HLD-BMS-002_v1.0.pdf"
+  }
+]

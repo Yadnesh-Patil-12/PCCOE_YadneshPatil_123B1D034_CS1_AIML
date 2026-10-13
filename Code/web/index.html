@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HLD Assistant - AUTOSAR design review</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231646C2'/%3E%3Cpath d='M7 22V10h4v4.2h6V10h4v12h-4v-4.4h-6V22z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div id="login" class="login" hidden>
+    <form class="login-card" id="loginForm" autocomplete="off">
+      <div class="brand big"><span class="logo">H</span><div><h1>HLD Assistant</h1><p>Ask questions about AUTOSAR high-level design documents and get answers with page-level sources.</p></div></div>
+      <label>User name<input id="lUser" value="alice" required></label>
+      <label>Password<input id="lPass" type="password" value="demo123" required></label>
+      <div class="chips" id="demoUsers">
+        <button type="button" class="chip" data-u="alice">alice - architect</button>
+        <button type="button" class="chip" data-u="bob">bob - tester</button>
+        <button type="button" class="chip" data-u="carol">carol - viewer</button>
+      </div>
+      <p class="err" id="lErr" role="alert"></p>
+      <button class="btn primary wide" type="submit">Sign in</button>
+      <p class="hint">Demo accounts use the password <code>demo123</code>. Roles decide who can upload, review and approve.</p>
+    </form>
+  </div>
+
+  <div id="app" class="shell" hidden>
+    <aside class="rail" id="rail">
+      <div class="brand"><span class="logo">H</span><div><strong>HLD Assistant</strong><small>AUTOSAR design review</small></div></div>
+      <nav id="nav">
+        <a href="#/ask" data-v="ask">Ask</a>
+        <a href="#/architecture" data-v="architecture">Architecture</a>
+        <a href="#/checks" data-v="checks">Checks <span class="count" id="navFindings"></span></a>
+        <a href="#/compare" data-v="compare">Compare revisions</a>
+        <a href="#/library" data-v="library">Documents</a>
+        <a href="#/evaluation" data-v="evaluation">Evaluation</a>
+        <a href="#/audit" data-v="audit" id="navAudit">Audit trail</a>
+      </nav>
+      <div class="rail-foot">
+        <div id="sysInfo" class="sys"></div>
+        <div class="who"><div><strong id="whoName"></strong><small id="whoRole"></small></div><button class="btn ghost" id="logout">Sign out</button></div>
+      </div>
+    </aside>
+    <main>
+      <header class="top">
+        <button class="btn ghost menu" id="menuBtn" aria-label="Menu">Menu</button>
+        <h2 id="title"></h2>
+        <label class="proj">Project <select id="project"></select></label>
+      </header>
+      <section id="view" class="view" aria-live="polite"></section>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="/app.js"></script>
+</body>
+</html>

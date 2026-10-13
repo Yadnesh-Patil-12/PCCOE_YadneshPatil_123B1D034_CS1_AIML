@@ -1,0 +1,102 @@
+{
+  "PRJ-BODY": {
+    "components": [
+      "SWC_BcmGateway",
+      "SWC_CentralLockArb",
+      "SWC_ChildLockMgr",
+      "SWC_DiagSessionMgr",
+      "SWC_DoorLockCtrl",
+      "SWC_DtcStorageMgr",
+      "SWC_KeylessEntryMgr",
+      "SWC_SpeedSignalAdapter",
+      "SWC_UdsRouter"
+    ],
+    "ports": [
+      "SWC_BcmGateway.P_GwStatus",
+      "SWC_BcmGateway.R_DtcStatus",
+      "SWC_BcmGateway.R_LockState",
+      "SWC_CentralLockArb.P_LockCmd",
+      "SWC_CentralLockArb.R_CrashStatus",
+      "SWC_CentralLockArb.R_KeyCmd",
+      "SWC_CentralLockArb.R_VehicleSpeed",
+      "SWC_ChildLockMgr.P_ChildLock",
+      "SWC_DiagSessionMgr.P_DiagSession",
+      "SWC_DiagSessionMgr.R_VehicleSpeed",
+      "SWC_DoorLockCtrl.P_LockState",
+      "SWC_DoorLockCtrl.R_ChildLock",
+      "SWC_DoorLockCtrl.R_DoorAjar",
+      "SWC_DoorLockCtrl.R_LockCmd",
+      "SWC_DtcStorageMgr.P_DtcStatus",
+      "SWC_DtcStorageMgr.R_LockState",
+      "SWC_KeylessEntryMgr.P_KeyCmd",
+      "SWC_SpeedSignalAdapter.P_VehicleSpeed",
+      "SWC_UdsRouter.P_UdsResp",
+      "SWC_UdsRouter.R_DiagSession"
+    ],
+    "interfaces": [
+      "SR_BcmStatus",
+      "SR_ChildLockState",
+      "SR_DiagSession",
+      "SR_DoorAjarState",
+      "SR_DoorLockState",
+      "SR_DtcStatus",
+      "SR_KeyFobCommand",
+      "SR_LockCommand",
+      "SR_UdsResponse",
+      "SR_VehicleSpeed"
+    ],
+    "signals": [
+      "SIG_BcmStatus",
+      "SIG_ChildLockState",
+      "SIG_DiagSession",
+      "SIG_DoorAjarState",
+      "SIG_DoorLockState",
+      "SIG_DtcStatus",
+      "SIG_KeyFobCmd",
+      "SIG_LockCmd",
+      "SIG_UdsResp",
+      "SIG_VehicleSpeed"
+    ]
+  },
+  "PRJ-ENERGY": {
+    "components": [
+      "SWC_CellMonitor",
+      "SWC_ChargeCtrl",
+      "SWC_CurrentSensorAdapter",
+      "SWC_SocEstimator",
+      "SWC_ThermalMgr"
+    ],
+    "ports": [
+      "SWC_CellMonitor.P_CellTemp",
+      "SWC_CellMonitor.P_CellVoltage",
+      "SWC_ChargeCtrl.P_ChargeLimit",
+      "SWC_ChargeCtrl.R_CoolantTemp",
+      "SWC_ChargeCtrl.R_Soc",
+      "SWC_CurrentSensorAdapter.P_PackCurrent",
+      "SWC_SocEstimator.P_Soc",
+      "SWC_SocEstimator.R_CellVoltage",
+      "SWC_SocEstimator.R_PackCurrent",
+      "SWC_ThermalMgr.P_CoolantReq",
+      "SWC_ThermalMgr.P_CoolantTemp",
+      "SWC_ThermalMgr.R_CellTemp"
+    ],
+    "interfaces": [
+      "SR_CellTemp",
+      "SR_CellVoltage",
+      "SR_ChargeLimit",
+      "SR_CoolantReq",
+      "SR_CoolantTemp",
+      "SR_PackCurrent",
+      "SR_Soc"
+    ],
+    "signals": [
+      "SIG_CellTemp",
+      "SIG_CellVoltage",
+      "SIG_ChargeLimit",
+      "SIG_CoolantReq",
+      "SIG_CoolantTemp",
+      "SIG_PackCurrent",
+      "SIG_Soc"
+    ]
+  }
+}

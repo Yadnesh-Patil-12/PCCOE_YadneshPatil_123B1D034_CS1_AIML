@@ -1,0 +1,112 @@
+{
+  "generated_at": "2026-10-11 10:51:07",
+  "configuration": {
+    "embedding": "hashing-tfidf",
+    "vector_store": "numpy",
+    "llm": "extractive",
+    "external_calls": "none (fully local)",
+    "notes": []
+  },
+  "counts": {
+    "questions": 43,
+    "answerable": 37,
+    "out_of_scope": 6
+  },
+  "retrieval": {
+    "hit_at_1": 0.676,
+    "hit_at_3": 0.838,
+    "hit_at_5": 0.973,
+    "mrr": 0.783,
+    "note": "hybrid retrieval only, tools disabled"
+  },
+  "answers": {
+    "answer_pass_rate": 0.973,
+    "citation_accuracy": 0.973,
+    "false_refusal_rate": 0.0,
+    "mean_groundedness": 1.0,
+    "answered_by_structured_tool": 18
+  },
+  "refusal": {
+    "correct_refusals": 6,
+    "out_of_scope": 6,
+    "refusal_accuracy": 1.0
+  },
+  "extraction": {
+    "per_entity": {
+      "PRJ-BODY/components": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "gold": 9,
+        "predicted": 9
+      },
+      "PRJ-BODY/ports": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "gold": 20,
+        "predicted": 20
+      },
+      "PRJ-BODY/interfaces": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "gold": 10,
+        "predicted": 10
+      },
+      "PRJ-BODY/signals": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "gold": 10,
+        "predicted": 10
+      },
+      "PRJ-ENERGY/components": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "gold": 5,
+        "predicted": 5
+      },
+      "PRJ-ENERGY/ports": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "gold": 12,
+        "predicted": 12
+      },
+      "PRJ-ENERGY/interfaces": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "gold": 7,
+        "predicted": 7
+      },
+      "PRJ-ENERGY/signals": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0,
+        "gold": 7,
+        "predicted": 7
+      }
+    },
+    "macro_precision": 1.0,
+    "macro_recall": 1.0,
+    "macro_f1": 1.0
+  },
+  "issues": {
+    "seeded": 12,
+    "detected": 12,
+    "recall": 1.0,
+    "high_medium_findings": 12,
+    "precision_high_medium": 1.0,
+    "low_severity_informational": 5,
+    "missed": [],
+    "unexpected_high_medium": []
+  },
+  "latency_ms": {
+    "mean": 11.1,
+    "p95": 15.1,
+    "max": 20.6
+  }
+}

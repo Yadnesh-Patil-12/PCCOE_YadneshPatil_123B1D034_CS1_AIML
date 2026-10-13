@@ -1,0 +1,62 @@
+[
+  {
+    "project": "PRJ-BODY",
+    "rule": "ORPHAN_CONSUMER",
+    "key": "SIG_DoorAjarState"
+  },
+  {
+    "project": "PRJ-BODY",
+    "rule": "UNDEFINED_INTERFACE",
+    "key": "SR_CrashStatus"
+  },
+  {
+    "project": "PRJ-BODY",
+    "rule": "UNDEFINED_COMPONENT",
+    "key": "SWC_ImmobilizerAuth"
+  },
+  {
+    "project": "PRJ-BODY",
+    "rule": "TYPE_CONFLICT",
+    "key": "SIG_VehicleSpeed"
+  },
+  {
+    "project": "PRJ-BODY",
+    "rule": "DUPLICATE_COMPONENT",
+    "key": "SWC_BcmGateway"
+  },
+  {
+    "project": "PRJ-BODY",
+    "rule": "SAFETY_LEVEL_GAP",
+    "key": "SWC_SpeedSignalAdapter>SWC_CentralLockArb"
+  },
+  {
+    "project": "PRJ-BODY",
+    "rule": "SUSPICIOUS_CONTENT",
+    "key": "HLD-DCM-003"
+  },
+  {
+    "project": "PRJ-ENERGY",
+    "rule": "TIMING_MISMATCH",
+    "key": "SIG_CellTemp"
+  },
+  {
+    "project": "PRJ-ENERGY",
+    "rule": "UNDEFINED_INTERFACE",
+    "key": "SR_CoolantTemperature"
+  },
+  {
+    "project": "PRJ-ENERGY",
+    "rule": "MISSING_VERIFICATION",
+    "key": "SWC_ChargeCtrl"
+  },
+  {
+    "project": "PRJ-ENERGY",
+    "rule": "SAFETY_LEVEL_GAP",
+    "key": "SWC_SocEstimator>SWC_ChargeCtrl"
+  },
+  {
+    "project": "PRJ-ENERGY",
+    "rule": "UNDEFINED_COMPONENT",
+    "key": "SWC_BmsGateway"
+  }
+]

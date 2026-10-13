@@ -1,0 +1,5 @@
+# Minimum to run everything (offline after install)
+numpy>=1.24
+pypdf>=4.0
+# Only needed to regenerate the synthetic PDFs (scripts/generate_synthetic_data.py)
+reportlab>=4.0

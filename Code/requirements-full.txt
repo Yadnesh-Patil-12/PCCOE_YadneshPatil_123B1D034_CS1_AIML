@@ -1,0 +1,4 @@
+-r requirements.txt
+# OPTIONAL upgrades (need internet once to download the model weights)
+sentence-transformers>=2.7     # BGE / E5 embeddings  -> set HLD_EMBEDDING_PROVIDER=bge
+faiss-cpu>=1.7.4               # FAISS index          -> set HLD_VECTOR_STORE_BACKEND=faiss
